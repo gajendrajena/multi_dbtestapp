@@ -1,0 +1,15 @@
+.articles
+  .article
+    = form_for(@article) do |f|
+      = render 'layouts/errors', :obj => @article if @article.errors.any?
+      = f.hidden_field :user_id,:value => current_user.id
+      .field
+        = f.label :title
+        %br/
+        = f.text_field :title
+      .field
+        = f.label :body
+        %br/
+        = f.text_area :body
+      .actions
+        = f.submit

@@ -1,0 +1,18 @@
+%h1 Listing articles
+.articles
+  - @articles.each do |article|
+    .article
+      .title= article.title
+      .user= article.user == current_user ? "me" : article.user.email
+      .body= article.body
+      .timestamp= article.updated_at
+      .options
+        = link_to 'Show', article
+        = link_to 'Edit', edit_article_path(article)
+        = link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }
+.option
+  = link_to 'New Article', new_article_path
+#products
+  - @products.each do |p|
+    .paroduct
+      = p.title

@@ -1,0 +1,22 @@
+development:
+  adapter: mysql
+  database: support_development
+  pool: 5
+  username: root
+  password: 
+
+test:
+  adapter: mysql
+  database: support_test
+  pool: 5
+  username: root
+  password: 
+
+production:
+  adapter: mysql
+  database: partners_external
+  pool: 5
+  ip: 192.168.1.1
+  port: 3306
+  username: root
+  password: 

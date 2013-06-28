@@ -1,0 +1,18 @@
+login: &login
+  adapter: mysql
+  pool: 5
+  timeout: 5000
+  user: root
+  password: 
+
+development:
+  database: test_app_dev
+  <<: *login
+
+test:
+  database: test_app_test
+  <<: *login
+  
+production:
+  database: test_app_dev
+  <<: *login

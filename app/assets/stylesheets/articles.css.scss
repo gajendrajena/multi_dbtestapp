@@ -1,0 +1,17 @@
+// Place all the styles related to the articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.articles{
+  clear: both; width: 100%;margin: 10px;
+
+  .article{
+    float: left; border-radius: 5px;padding:10px; border: 1px solid #ddd; margin: 5px;float: left;width: 1050px;
+    .body{margin: 10px 0; min-height: 50px;}
+    .title,.timestamp{float:left;width:80%;}
+    .title{font-weight:bold;margin:5px;}
+    .user,.options{float:right;width:20%;text-align:right;}
+
+    input[type=text],textarea{width: 300px;padding:5px; text-indent: 5px; border: 1px solid #CCC;}
+  }
+}
+.option{width:100%;float: left; margin: 10px;}
